@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<root>
+    <devicevendordef>
+        <vendorname>MICROSOFT</vendorname>
+        <vendorid>0x045e</vendorid>
+    </devicevendordef>
+
+    <deviceproductdef>
+        <productname>SCULPT_ERGO_KEYBOARD</productname>
+        <productid>0x07a5</productid>
+    </deviceproductdef>
+
+    <item>
+        <name>F19 to F19</name>
+        <appendix>(F19 to Hyper (ctrl+shift+cmd+opt) + F19 Only, send escape)</appendix>
+        <identifier>private.f192f19_escape</identifier>
+        <autogen>
+            --KeyOverlaidModifier--
+            KeyCode::F19,
+            KeyCode::COMMAND_L,
+            ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+            KeyCode::ESCAPE
+        </autogen>
+    </item>
+
+    <item>
+        <name>Dollar to less-than on Microsoft Sculpt Ergo Keyboard</name>
+        <identifier>private.doller_to_less_than_ms_sculpt_ergo</identifier>
+        <device_only>DeviceVendor::MICROSOFT, DeviceProduct::SCULPT_ERGO_KEYBOARD</device_only>
+        <autogen>__KeyToKey__ KeyCode::DANISH_DOLLAR, KeyCode::BACKQUOTE</autogen>
+        <autogen>__KeyToKey__ KeyCode::BACKQUOTE, KeyCode::DANISH_DOLLAR</autogen>
+    </item>
+</root>
